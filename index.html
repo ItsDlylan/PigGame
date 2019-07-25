@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        
+        <title>Pig Game</title>
+    </head>
+
+    <body>
+        <div class="wrapper clearfix">
+
+            <div class="player-0-panel active">
+                <div class="player-name" id="name-0">Player 1</div>
+                <div class="player-score" id="score-0">41</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-0">11</div>
+                </div>
+            </div>
+            
+            <div class="player-1-panel">
+                <div class="player-name" id="name-1">Player 2</div>
+                <div class="player-score" id="score-1">72</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-1">0</div>
+                </div>
+            </div>
+            
+            <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
+            <button class="btn-info"><i class=" info-i ion-ios-information-outline"></i></button>
+            <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
+            
+            <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+            
+            <img src="dice-5.png" alt="Dice" class="dice">
+            <img src="dice-5.png" alt="Dice" class="dice dice2">
+            <div class="wrapper info-wrapper">
+                    <button class="btn-exit"><i class="exit-i ion-ios-close"></i></button>
+                    <div class="information">
+                        <h2 class="rules player-name">How to Play</h2>
+                        <ol class="list">
+                        <li class="listItem"> Click the "Roll Dice" button to begin the game, and roll your first dice. To keep your score you click the "Hold" button</li>
+                        <li class="listItem"> If you hit a die with the amount of '1', or a '6' your turn ends and it begins the next Players Turn.</li>
+                        <li class="listItem"> If a single dice rolls 2 6's in a row, or 2 1's, if you're playing with 2 dice, if you roll on 2 6's/ 2 1's on 1 single roll you lose your entire Score and you lose your turn.</li>
+                        <li class="listItem"> If a double is rolled, the point total is added to the turn total as with any roll but the player is obligated to roll again </li>
+                        <li class="listItem"> Clicking New Game brings up a menu to Select between 1-2 dice, and your winning score limit.</li>
+                    </ol>
+                        <h3 class="winning">The First Player to obtain the set amount of points wins!</h3>
+                        <h3 class="luck">Good Luck!</h3>
+                        <p class="info">For More Information on the Pig Game <a href="https://en.wikipedia.org/wiki/Pig_(dice_game)" class="wiki">Wikipedia for The Pig (dice game)</a> </p>
+                        
+                    </div>
+                    
+            </div>
+            <div class="wrapper newGame">
+                    <form class="form" id="form">
+                        <h2 class="form-h2">What should the score limit be?</h2>
+                        <input type="number"  id="scoreLimit" min="1" max="100" value="1" class="scoreLimit-input" required>
+                        <p class="error"></p>
+                        <h2 class="form-h2">How many Dice would you like to have?</h2>
+                        <div id="radio-group">
+                            <input type="radio" id="1dice"
+                                name="dice" value="1" checked>
+                            <label for="1dice">1</label>
+                        
+                            <input type="radio" id="2dice"
+                                name="dice" value="2">
+                            <label for="2dice">2</label>
+                        </div>
+    
+                        <button type="button" class="btn-new newGameSubmit"><i class="ion-ios-plus-outline" type="submit"></i>Start New game</button>
+                    </form>
+                </div>
+        </div>
+
+        
+        
+        <script src="app.js"></script>
+    </body>
+</html>
+
+
